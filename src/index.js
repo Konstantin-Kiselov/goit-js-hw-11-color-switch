@@ -28,13 +28,13 @@ let switchTheme = null;
 function switchBgColor() {
   document.body.style.background =
     colors[randomIntegerFromInterval(0, colors.length - 1)];
+  console.log('Меняю цвет фона на:', document.body.style.background);
 }
 
 function startSwitchTheme() {
   switchTheme = setInterval(switchBgColor, 1000);
   refs.startBtn.setAttribute('disabled', true);
   refs.stopBtn.removeAttribute('disabled');
-  console.log('Меняю цвет фона');
 }
 
 function stopSwitchTheme() {
