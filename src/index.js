@@ -8,9 +8,9 @@ const colors = [
   '#009688',
   '#795548',
 ];
-
 console.log(colors);
 
+const SWITCH_DELAY = 1000;
 let switchThemeTimeoutID = null;
 
 const refs = {
@@ -36,7 +36,7 @@ function switchBgColor() {
 // Запускаем изменение фона раз в 1 сек, блокируем кнопку Start, разблокируем Stop
 
 function startSwitchTheme() {
-  switchThemeTimeoutID = setInterval(switchBgColor, 1000);
+  switchThemeTimeoutID = setInterval(switchBgColor, SWITCH_DELAY);
   refs.startBtn.setAttribute('disabled', true);
   refs.stopBtn.removeAttribute('disabled');
 }
