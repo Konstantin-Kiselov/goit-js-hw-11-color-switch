@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");const t=["#FFFFFF","#2196F3","#4CAF50","#FF9800","#009688","#795548"];console.log(t);const e=1e3;let n=null;const o={startBtn:document.querySelector('[data-action="start"]'),stopBtn:document.querySelector('[data-action="stop"]')},s=(t,e)=>Math.floor(Math.random()*(e-t+1)+t);function a(){document.body.style.background=t[s(0,t.length-1)],console.log("Меняю цвет фона на:",document.body.style.background)}function r(){n=setInterval(a,e),o.startBtn.setAttribute("disabled",!0),o.stopBtn.removeAttribute("disabled")}function c(){clearInterval(n),o.startBtn.removeAttribute("disabled"),o.stopBtn.setAttribute("disabled",!0),console.log("Останавливаю изменение фона")}o.startBtn.addEventListener("click",r),o.stopBtn.addEventListener("click",c);
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-color-switch/src.3370b1ed.js.map
+//# sourceMappingURL=/goit-js-hw-11-color-switch/src.e38b714a.js.map
